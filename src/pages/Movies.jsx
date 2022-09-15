@@ -3,8 +3,6 @@ import HeroSlider from '../components/HeroSlider';
 import Slider from '../components/Slider'
 
 
-
-
 function Movies({movies, topMovies, TvShows}) {
 
     
