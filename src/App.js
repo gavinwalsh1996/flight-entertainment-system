@@ -17,6 +17,7 @@ import './css/Movies-Kids.css'
 import './css/Music.css'
 import './css/Home.css'
 import './css/HeroSlider.css'
+import './css/FilterButton.css'
 // import './css/MusicPlayer.css' 
 
 // This is a test

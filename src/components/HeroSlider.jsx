@@ -2,10 +2,11 @@
 import React, {useState }from 'react';
 import Elvis from '../images/elvis.jpeg'
 import Slider from './Slider'
+import FilterButton from './FilterButton';
 
 
 
-function MovieGrid({items}) {
+function HeroSlider({items}) {
 
 
 //state 
@@ -58,10 +59,15 @@ return (
         </div> 
     </div> */}
 
-<div className="filter">
-    <h3 className='movie-genre'>New Releases</h3>
-    <p>TV SHOWS</p>
-</div>
+
+    {/* Filter Button */}
+
+    <div className="filter">
+        <h3 className='movie-genre'>New Releases</h3>
+        <FilterButton />
+    </div> 
+
+
 
 
 
@@ -95,4 +101,4 @@ return (
 }
 
 
-export default MovieGrid;
+export default HeroSlider;
