@@ -1,5 +1,10 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import IconButton from '@mui/material/IconButton'
+import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
+import LightModeIcon from '@mui/icons-material/LightMode';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import FlightIcon from '@mui/icons-material/Flight';
 
 
 
@@ -22,18 +27,24 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
         </div>
 
         <div className="header-icons">
+
             <div className="icons">
-                <span>Volume Down</span>
-                <span>Volume Mute</span>
+                <IconButton>
+                    <VolumeMuteIcon fontSize='medium' />
+                </IconButton>
             </div>
 
             <div className="icons">
-                <span>Dark Mode</span> 
-            {/* <span><FaIcons.FaCircleNotch /></span> */}
+                <IconButton>
+                    <DarkModeIcon fontSize='medium' />
+                </IconButton>
             </div>
     
             <div className="icons">
-                <span>Brightness</span>
+                <IconButton>
+                     <FlightIcon fontSize='medium' />
+                </IconButton>
+                <p>1H 10M</p>
             </div>
          </div>
 
@@ -44,17 +55,21 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
 
     <div className="header-icons-mobile">
         <div className="icons">
-            <span>Volume Down</span>
-             {/* <span><FaIcons.FaVolumeMute /></span> */}
+        <IconButton>
+            <VolumeMuteIcon fontSize='medium' />
+        </IconButton>
         </div>
 
         <div className="icons">
-            <span>Dark Mode</span> 
-            {/* <span><FaIcons.FaCircleNotch /></span> */}
+        <IconButton>
+            <DarkModeIcon fontSize='medium' />
+        </IconButton>
         </div>
     
         <div className="icons">
-            <span>Brightness</span>
+        <IconButton>
+            <FlightIcon fontSize='medium' />
+        </IconButton>
         </div>
     </div> 
 

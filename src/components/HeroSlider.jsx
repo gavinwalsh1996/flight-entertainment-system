@@ -1,18 +1,15 @@
 // import { width } from '@mui/system';
 import React, {useState }from 'react';
-import Elvis from '../images/elvis.jpeg'
-import Slider from './Slider'
 import FilterButton from './FilterButton';
 
+//Test
+// import YouTube from 'react-youtube';
 
 
-function HeroSlider({items}) {
 
+function HeroSlider({selectMovie}) {
 
-//state 
-const [selectMovie, setSelectMovie] = useState(items.at(10));
-   
-   
+      
 return (
 
 <>
@@ -35,7 +32,6 @@ return (
         
     </div>
 
-    {/* <div className="filter">Movies/TV</div> */}
 
 
 
@@ -67,7 +63,10 @@ return (
         <FilterButton />
     </div> 
 
+    
+    {/* Test */}
 
+{/* 
 
 
 
@@ -85,13 +84,12 @@ return (
    
 
    ))}
-   </div> 
+   </div>  */}
+
+   {/* <Slider items={items}/>
+   <Slider items={items}/> */}
 
 
-   {/* Test */}
-
-   {/* <Slider items={movies} setSelectMovie={setSelectMovie}/>
-   <Slider items={topMovies} setSelectMovie={setSelectMovie}/> */}
 
 
 

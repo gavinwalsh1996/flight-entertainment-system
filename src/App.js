@@ -18,6 +18,7 @@ import './css/Music.css'
 import './css/Home.css'
 import './css/HeroSlider.css'
 import './css/FilterButton.css'
+import { Delete } from '@mui/icons-material';
 // import './css/MusicPlayer.css' 
 
 // This is a test
@@ -58,9 +59,8 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
   await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
   console.log(kidsSeries)
 
-
-
 }
+
 
 
 //Use Effect 
@@ -76,11 +76,8 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
   return (
 
     <>
-    
 
-      <Header Home={Home} Movies={Movies} Kids={Kids} Music={Music} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
-
-
+     <Header Home={Home} Movies={Movies} Kids={Kids} Music={Music} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
 
     </>
   )

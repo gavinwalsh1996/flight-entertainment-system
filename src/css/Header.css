@@ -32,6 +32,13 @@
     cursor: pointer;
 }
 
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .items {
     list-style: none;
 }

@@ -3,11 +3,8 @@ import React, {useState }from 'react';
 
 
 
-function Slider ({items}) {
+function Slider ({items,setSelectMovie}) {
 
-
-//state 
-// const [selectMovie, setSelectMovie] = useState(items.at(10));
    
    
 return (
@@ -16,16 +13,16 @@ return (
 
 
     <h3 className='movie-genre'>Picked For You</h3>
-<div className="media-scroller snaps-inline">
+
+        <div className="media-scroller snaps-inline">
     
     {items.map((image, index) => (
 
-                
-        // onClick={()=>{setSelectMovie(image)}}
+
 
         <div className="media-element">
-            <img src={'https://image.tmdb.org/t/p/w500' + image.poster_path} />
-            {/*  onClick={()=>{setSelectMovie(image)}} */}
+            <img src={'https://image.tmdb.org/t/p/w500' + image.poster_path} onClick={()=>{setSelectMovie(image)}} />
+            {/* onClick={()=>{setSelectMovie(image)}}  */}
         </div>
 
    
