@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 
 //Components
 import Header from './components/Header'
+import MusicPlayer from './components/MusicPlayer';
 
 //Pages
 import Home from './pages/Home';
@@ -18,10 +19,24 @@ import './css/Music.css'
 import './css/Home.css'
 import './css/HeroSlider.css'
 import './css/FilterButton.css'
+import './css/MusicPlayer.css'
 import { Delete } from '@mui/icons-material';
-// import './css/MusicPlayer.css' 
 
-// This is a test
+// MUI ICONS
+import { styled, Typography, Stack, Box } from '@mui/material';
+
+// import { Slider } from '@mui/material';
+// import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
+// import SkipNextIcon from '@mui/icons-material/SkipNext';
+// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+// import PauseIcon from '@mui/icons-material/Pause';
+// import VolumeDownIcon from '@mui/icons-material/VolumeDown';
+// import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+// import VolumeOffIcon from '@mui/icons-material/VolumeOff';
+// import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
+
+
+
 
 function App() {
 
@@ -75,11 +90,18 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
 
   return (
 
-    <>
+    <div className='app'>
 
-     <Header Home={Home} Movies={Movies} Kids={Kids} Music={Music} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
+      <div className="header">
+        <Header Home={Home} Movies={Movies} Kids={Kids} Music={Music} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
+      </div>
 
-    </>
+      <div className="music-player">
+        <MusicPlayer />
+      </div>
+  
+
+    </div>
   )
 }
 

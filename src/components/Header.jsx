@@ -30,12 +30,6 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
 
             <div className="icons">
                 <IconButton>
-                    <VolumeMuteIcon fontSize='medium' />
-                </IconButton>
-            </div>
-
-            <div className="icons">
-                <IconButton>
                     <DarkModeIcon fontSize='medium' />
                 </IconButton>
             </div>
@@ -54,11 +48,6 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
     {/* Mobile */}
 
     <div className="header-icons-mobile">
-        <div className="icons">
-        <IconButton>
-            <VolumeMuteIcon fontSize='medium' />
-        </IconButton>
-        </div>
 
         <div className="icons">
         <IconButton>

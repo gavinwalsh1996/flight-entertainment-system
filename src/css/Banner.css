@@ -1,0 +1,13 @@
+.banner {
+    width: 100vw;
+    height: 360px;
+    background-color: #222222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: antiquewhite;
+    font-size: large;
+}

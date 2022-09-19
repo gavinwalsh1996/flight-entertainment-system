@@ -1,0 +1,39 @@
+import React from 'react'
+
+//CSS
+import '../css/PlaylistCards.css'
+
+
+function PlaylistCards() {
+
+
+  return (
+
+    <>
+    
+        <h3 className='movie-genre'>Picked For You</h3>
+
+        <div className="media-scroller snaps-inline">
+{/* 
+        {items.map((image, index) => (
+
+
+
+        <div className="media-element">
+            <img src={'https://image.tmdb.org/t/p/w500' + image.poster_path} />
+        </div>
+
+
+
+        ))} */}
+
+</div>
+    
+    
+    
+    </>
+
+  )
+}
+
+export default PlaylistCards
