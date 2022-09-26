@@ -23,7 +23,7 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
             <div className="items"><Link to="/">Home</Link></div>
             <div className="items"><li><Link to="/movies">Movies</Link></li></div>
             <div className="items"><li><Link to="/kids">Kids</Link></li></div>
-            <div className="items"><li><Link to="/music">Music</Link></li> </div>
+            <div className="items"><li><Link to="/music">Music / Audio</Link></li> </div>
         </div>
 
         <div className="header-icons">
@@ -68,7 +68,7 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
 
 <Routes>
 
-    <Route path='/' element={<Home/>}/>
+    <Route path='/' element={<Home/>} />
     <Route path='/movies' element={<Movies movies={movies} topMovies={topMovies}/>}/>
     <Route path='/kids' element={<Kids kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries}/>} />
     <Route path='/music' element={<Music/>} />

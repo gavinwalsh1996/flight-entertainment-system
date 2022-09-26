@@ -11,10 +11,6 @@ function Movies({movies, topMovies, TvShows}) {
     // STATE
     const [selectMovie, setSelectMovie] = useState(movies[3]);
 
-
-
-
-
     // YOUTUBE TRAILER TEST
 
     // const API_URL = 'https://api.themoviedb.org/3'

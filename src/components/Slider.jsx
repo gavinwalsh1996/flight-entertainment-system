@@ -5,14 +5,13 @@ import React, {useState }from 'react';
 
 function Slider ({items,setSelectMovie}) {
 
-   
-   
+
 return (
 
 <>
 
-
-    <h3 className='movie-genre'>Picked For You</h3>
+{/* 
+    <h3 className='movie-genre'>Picked For You</h3> */}
 
         <div className="media-scroller snaps-inline">
     

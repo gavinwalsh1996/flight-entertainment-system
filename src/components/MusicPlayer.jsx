@@ -12,23 +12,21 @@ import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 import IconButton from '@mui/material/IconButton'
 
-//Music 
-import Elvis from '../music/Elvis.mp3'
-import Fade from '../music/Fade.mp3' 
-
-const playList = [Elvis, Fade];
 
 
+function MusicPlayer({songs}) {
+    
 
+    //Song Files
+    const songFiles = songs.map(song => song.songFile)
 
-function MusicPlayer() {
-
+    
     //Hooks
     const audioPlayer = useRef()
 
     //State
     const [index, setIndex] = useState(0);
-    const [currentSong] = useState(playList[index]);
+    const [currentSong] = useState(songFiles[index]);
     const [isPlaying, setisPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [mute, setMute] = useState(false);
@@ -51,13 +49,13 @@ function MusicPlayer() {
     }
 
     function toggleSkipForward() {
-        if(index >= playList.length - 1) {
+        if(index >= songFiles.length - 1) {
             setIndex(0);
-            audioPlayer.current.src = playList[0];
+            audioPlayer.current.src = songFiles[0];
             audioPlayer.current.play();
         } else {
             setIndex(prev => prev + 1);
-            audioPlayer.current.src = playList[index + 1];
+            audioPlayer.current.src = songFiles[index + 1];
             audioPlayer.current.play();
         }
     }
@@ -66,7 +64,7 @@ function MusicPlayer() {
     function toggleSkipBackward() {
         if(index > 0) {
             setIndex(prev => prev -1);
-            audioPlayer.current.src = playList[index -1];
+            audioPlayer.current.src = songFiles[index -1];
             audioPlayer.current.play();
         } 
     }
