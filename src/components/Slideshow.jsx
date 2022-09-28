@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react'
 
-//Images 
-import Elvis from '../images/elvis.jpeg'
-import Adelle from '../images/adelle.png'
-import JuiceWrld from '../images/Juicewrld.jpg'
+//Images Posters
+import BackDrop from '../images/sandwich.jpg'
+import FoodBanner from '../images/foodbanner.jpg'
 
-const posters = [Elvis, Adelle, JuiceWrld];
-const delay = 8000;
+const posters = [BackDrop, FoodBanner, FoodBanner];
+const delay = 20000;
 
 
 

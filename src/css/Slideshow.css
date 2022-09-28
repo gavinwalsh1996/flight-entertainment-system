@@ -4,6 +4,7 @@
     margin: 0 auto;
     overflow: hidden;
     max-width: 100vw;
+    background-color:  #222222;
   }
 
   .slideshowSlider {
@@ -13,7 +14,7 @@
   
   .slide {
     display: inline-block;
-    height: 280px;
+    height: 200px;
     width: 100%;
   }
 
