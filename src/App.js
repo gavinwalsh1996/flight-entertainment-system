@@ -61,6 +61,7 @@ const kidsTvURL = 'https://api.themoviedb.org/3/tv/popular?api_key=1f7c961ae4f02
 const topPicks = 'https://api.themoviedb.org/3/movie/top_rated?api_key=1f7c961ae4f02a23e0968d449c15bc98&${process.env.API_KEY}&language=en-US&page=1';
 // const kidsAnimatedMovies = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=16';
 const kidsSeries = 'https://api.themoviedb.org/3/discover/tv?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=10762'
+console.log(url)
 
 //Async function to fetch API
 async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {

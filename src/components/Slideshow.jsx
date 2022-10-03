@@ -3,8 +3,10 @@ import React, { useState, useEffect } from 'react'
 //Images Posters
 import BackDrop from '../images/sandwich.jpg'
 import FoodBanner from '../images/foodbanner.jpg'
+import Batman from '../images/batman.jpg'
+import Pulpfiction from '../images/pulp-fiction.jpg'
 
-const posters = [BackDrop, FoodBanner, FoodBanner];
+const posters = [Pulpfiction, Batman, BackDrop, FoodBanner, FoodBanner];
 const delay = 20000;
 
 

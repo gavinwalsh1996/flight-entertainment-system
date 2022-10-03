@@ -28,7 +28,7 @@ getWeather();
   return (
 
     <div className="weather-container">
-        <div className="weather-one">
+        {/* <div className="weather-one">
             <div className="city">
                 <h3>Barcelona</h3>
                 <h1 className='temp'>{weatherDetails.main.temp}°C</h1>
@@ -50,7 +50,7 @@ getWeather();
                 <p>{weatherDetails.wind.speed} MPH</p>
                 <p>Wind Speed</p>
             </div>
-        </div>
+        </div> */}
     </div>
 
   )
