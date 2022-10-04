@@ -6,6 +6,9 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import FlightIcon from '@mui/icons-material/Flight';
 
+// Components 
+import Timer from '../components/Timer'
+
 
 
 function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsTvSeries}) {
@@ -38,7 +41,7 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
                 <IconButton>
                      <FlightIcon fontSize='medium' />
                 </IconButton>
-                <p>1H 10M</p>
+                <Timer duration={5 * 60 * 30 * 1000}/>
             </div>
          </div>
 
