@@ -14,7 +14,6 @@ const [weatherDetails, setWeatherDetails] = useState({});
 async function getWeather() {
 let fetchUrl = await fetch('https://api.openweathermap.org/data/2.5/weather?q=barcelona&appid=fc676f0a98ebdc2ee6424a83bb7de1f8&units=metric');
 let data = await fetchUrl.json()
-console.log(data);
 setWeatherDetails(data)
 }
 

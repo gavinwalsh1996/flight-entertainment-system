@@ -7,7 +7,7 @@ import Batman from '../images/batman.jpg'
 import Pulpfiction from '../images/pulp-fiction.jpg'
 
 const posters = [Pulpfiction, Batman, BackDrop, FoodBanner, FoodBanner];
-const delay = 20000;
+const delay = 15000;
 
 
 

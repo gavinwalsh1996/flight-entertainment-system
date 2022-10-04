@@ -11,8 +11,9 @@ import ToDoWidget from '../components/ToDoWidget'
 import '../css/Slideshow.css'
 import '../css/Weather.css'
 
-import Pringles from '../images/pringles.jpeg'
+import Pringles1 from '../images/pringles1.jpg'
 import Earphones from '../images/earphones.jpeg'
+import CokeCan from '../images/cokecan.jpg'
 
 
 function Home() {
@@ -33,74 +34,83 @@ useEffect(() => {
 // Snacks 
 
 
-const snacks = [
-  {
-    image: Pringles,
-    name: 'Pringles',
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-  {
-    image: Pringles,
-    name: 'Pringles'
-  },
-]
+const products = [
 
-const accessories = [
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: Pringles1,
+    name: 'Pringles',
+    type: 'chips'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: Pringles1,
+    name: 'Pringles',
+    type: 'chips'
   },
   {
-    image: Earphones,
-    name: 'Earphones'
+    image: Pringles1,
+    name: 'Pringles',
+    type: 'chips'
   },
+  {
+    image: Pringles1,
+    name: 'Pringles',
+    type: 'chips'
+  },
+  {
+    image: Pringles1,
+    name: 'Pringles',
+    type: 'chips'
+  },
+   {
+     image: Earphones,
+     name: 'Earphones',
+     type: 'accessories'
+   },
+   {
+     image: Earphones,
+     name: 'Earphones',
+     type: 'accessories'
+   },
+   {
+     image: Earphones,
+     name: 'Earphones',
+     type: 'accessories'
+   },
+   {
+     image: Earphones,
+     name: 'Earphones',
+     type: 'accessories'
+   },
+   {
+     image: Earphones,
+     name: 'Earphones',
+     type: 'accessories'
+   },
 ]
 
 
@@ -131,13 +141,21 @@ const accessories = [
         <div className="main-section-two">
             {/* <Weather /> */}
             <div className="genre">
-              <h3>Snacks</h3>
+              <h3>Food, Drinks & Accessories</h3>
             </div>
-            <MiniSlider items={snacks}/>
-            <div className="genre">
+            <MiniSlider items={products}/>
+            {/* <div className="genre">
               <h3>Accessories</h3>
             </div>
-            <MiniSlider items={accessories}/>
+            <MiniSlider items={accessories}/> */}
+
+          <PopUp trigger={timedPopUp} setTrigger={setTimedPopUp}>
+          <h3 className='popup-text'>Welcome Aboard!</h3>
+          <br></br>
+          <p className='popup-text'>Please sit back and relax. We hope you enjoy your flight from Dublin (DUB) to Barcelona (BCN)</p>
+        </PopUp>
+
+            
         </div>
         
       
