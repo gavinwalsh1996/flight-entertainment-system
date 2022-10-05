@@ -77,6 +77,16 @@ const products = [
     type: 'drinks'
   },
   {
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
+  },
+  {
+    image: CokeCan,
+    name: 'Coke',
+    type: 'drinks'
+  },
+  {
     image: Pringles1,
     name: 'Pringles',
     type: 'chips'

@@ -32,9 +32,9 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
         <div className="header-icons">
 
             <div className="icons">
-                <IconButton>
+                {/* <IconButton>
                     <DarkModeIcon fontSize='medium' />
-                </IconButton>
+                </IconButton> */}
             </div>
     
             <div className="icons">
@@ -53,9 +53,9 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
     <div className="header-icons-mobile">
 
         <div className="icons">
-        <IconButton>
+        {/* <IconButton>
             <DarkModeIcon fontSize='medium' />
-        </IconButton>
+        </IconButton> */}
         </div>
     
         <div className="icons">

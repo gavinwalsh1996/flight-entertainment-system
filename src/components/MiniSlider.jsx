@@ -8,7 +8,7 @@ import '../css/MiniSlider.css'
 function MiniSlider({items}) {
 
 //State 
-const [filteredSnacks, setFilteredSnacks] = useState(items.slice(0,8))
+const [filteredSnacks, setFilteredSnacks] = useState(items.slice(0,10))
 
 const filterByType = type => {
     setFilteredSnacks(

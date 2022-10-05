@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
 }
 
 
@@ -41,4 +41,18 @@
     padding-left: 20px;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 770px) {
+
+    .main-section-one {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
 }

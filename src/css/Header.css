@@ -69,13 +69,18 @@ a:hover {
         padding: 0 20px;
     }
 
-    .header-icons-mobile {
+     /* .header-icons-mobile {
         display: flex;
         justify-content: end;
-        gap: 30px;
         padding: 10px 20px;
         padding-top: 80px;
-    }
+    } */
+
+    .header-links {
+        display: flex;
+        gap: 20px;
+        padding: 0 20px;
+    } 
 
 
 }
