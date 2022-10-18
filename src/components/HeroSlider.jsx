@@ -18,11 +18,11 @@ return (
 
         
     <div className="hero">
+        {/* <Youtube /> */}
 
         <div className="bg-image">
             <img src={'https://image.tmdb.org/t/p/w500' + selectMovie.backdrop_path} className="banner-img" />
         </div>
-    
         <div className="movie-details">
             <h1>{selectMovie.original_title}</h1>
             <p>{selectMovie.overview}</p> 
@@ -57,10 +57,10 @@ return (
 
     {/* Filter Button */}
 
-    <div className="filter">
+    {/* <div className="filter">
         <h3 className='movie-genre'>New Releases</h3>
         <FilterButton />
-    </div> 
+    </div>  */}
 
     
     {/* Test */}

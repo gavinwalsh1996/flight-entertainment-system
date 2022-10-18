@@ -1,16 +1,6 @@
 import React, { useState, useEffect } from 'react';
 // import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
-//Components
-import Header from './components/Header'
-import MusicPlayer from './components/MusicPlayer';
-
-//Pages
-import Home from './pages/Home';
-import Kids from './pages/Kids';
-import Movies from './pages/Movies';
-import Music from './pages/Music'
-
 //CSS
 import './css/Header.css'
 import './App.css';
@@ -25,6 +15,19 @@ import { Delete } from '@mui/icons-material';
 // MUI ICONS
 import { styled, Typography, Stack, Box } from '@mui/material';
 
+//Components
+import Header from './components/Header'
+import MusicPlayer from './components/MusicPlayer';
+
+//Pages
+import Home from './pages/Home';
+import Kids from './pages/Kids';
+import Movies from './pages/Movies';
+// import Music from './pages/Music'
+import Music from './pages/Music'
+const lazyMusic = React.lazy(() => import('./pages/Music'))
+
+
 // import { Slider } from '@mui/material';
 // import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
 // import SkipNextIcon from '@mui/icons-material/SkipNext';
@@ -34,6 +37,9 @@ import { styled, Typography, Stack, Box } from '@mui/material';
 // import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 // import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 // import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
+
+const API_URL = 'https://api.themoviedb.org/3';
+const API_KEY = 'api_key=1f7c961ae4f02a23e0968d449c15bc98'
 
 
 
@@ -50,8 +56,9 @@ const [kidsMovies, setKidsMovies] = useState([])
 const [kidsTv, setKidsTv] = useState([])
 const [TvShows, setTvShows] = useState([])
 const [kidsTvSeries, setKidsTvSeries] = useState([])
-const [allMovies, setAllMovies] = useState([])
 
+//Test 
+// const [selectMovie, setSelectMovie] = useState(movies[3]);
 
 
 //API URL 
@@ -75,10 +82,10 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
 }
 
 
+
 //Use Effect 
  useEffect(() => { 
   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
-
 
 }, [])
 
@@ -88,7 +95,7 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
     <div className='app'>
 
       <div className="header">
-        <Header Home={Home} Movies={Movies} Kids={Kids} Music={Music} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
+        <Header Home={Home} Movies={Movies} Kids={Kids} Music={lazyMusic} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
       </div>
 
       <div className="music-player">

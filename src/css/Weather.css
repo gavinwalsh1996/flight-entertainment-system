@@ -1,6 +1,6 @@
 .weather-container {
-    width: 100%;
-    height: 200px;
+    max-width: 100%;
+    height: 25vh;
     padding: 20px;
     display: flex;
     gap: 40px;
@@ -46,5 +46,9 @@
 
 .greeting-message {
     padding: 20px
+}
+
+.weather-details {
+    font-size: 10px;
 }
 

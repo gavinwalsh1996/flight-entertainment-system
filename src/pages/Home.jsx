@@ -5,7 +5,7 @@ import Slideshow from '../components/Slideshow'
 import Weather from '../components/Weather'
 import MiniSlider from '../components/MiniSlider'
 import PopUp from '../components/PopUp'
-import ToDoWidget from '../components/ToDoWidget'
+import ToDoWidget from '../components/ToDoWidget' 
 
 //CSS
 import '../css/Slideshow.css'
@@ -16,7 +16,7 @@ import Earphones from '../images/earphones.jpeg'
 import CokeCan from '../images/cokecan.jpg'
 
 
-function Home() {
+function Home({movies}) {
 
 //State 
 const [buttonPopUp, setButtonPopUp] = useState(false);
@@ -155,7 +155,7 @@ const products = [
         </PopUp> */}
 
         <div className="hero-section">
-           <Slideshow />
+           <Slideshow movies={movies}/>
         </div>
         
         <div className="main-section-one">

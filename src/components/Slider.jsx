@@ -1,17 +1,16 @@
 // import { width } from '@mui/system';
-import React, {useState }from 'react';
+import React, { useState }from 'react';
 
 
 
-function Slider ({items,setSelectMovie}) {
+function Slider ({items,setSelectMovie,movieGenre}) {
 
 
 return (
 
 <>
-
-{/* 
-    <h3 className='movie-genre'>Picked For You</h3> */}
+ 
+    <h3 className='movie-genre'>{movieGenre}</h3>
 
         <div className="media-scroller snaps-inline">
     

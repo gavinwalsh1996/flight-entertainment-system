@@ -6,16 +6,16 @@ import FoodBanner from '../images/foodbanner.jpg'
 import Batman from '../images/batman.jpg'
 import Pulpfiction from '../images/pulp-fiction.jpg'
 
-const posters = [Pulpfiction, Batman, BackDrop, FoodBanner, FoodBanner];
-const delay = 15000;
+const delay = 10000;
 
 
-
-
-function Slideshow() {
+function Slideshow({movies}) {
 
 //State 
 const [index, setIndex] = useState(0)
+
+let posters = movies.map(m => m.poster_path)
+
 
 //UseEffect
 useEffect(() => {
@@ -36,7 +36,7 @@ useEffect(() => {
     <div className="slideshow">
       <div className="slideshowSlider"  style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}>
         {posters.map((poster, index) => (
-          <img src={poster} className="slide" key={index} style={{ poster }}/>
+          <img src={'https://image.tmdb.org/t/p/w500' + poster} className="slide" key={index} style={{ poster }}/>
           
         ))}
       </div>

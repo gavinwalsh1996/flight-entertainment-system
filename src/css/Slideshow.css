@@ -10,11 +10,14 @@
   .slideshowSlider {
     white-space: nowrap;
     transition: ease 1000ms;
+    height: 50vh;
+    width: 100vw;
+    object-fit: cover;
   }
   
   .slide {
     display: inline-block;
-    height: 360px;
+    height: 50vh;
     width: 100%;
   }
 

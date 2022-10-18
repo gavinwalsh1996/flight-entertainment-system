@@ -15,7 +15,6 @@ import IconButton from '@mui/material/IconButton'
 
 
 function MusicPlayer({songs}) {
-    
 
     //Song Files
     const songFiles = songs.map(song => song.songFile)

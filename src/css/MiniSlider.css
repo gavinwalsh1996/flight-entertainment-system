@@ -70,6 +70,13 @@ p {
 
 }
 
+select {
+    background-color: #222222;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+
 @media (max-width: 1280px) {
 
     .mini-media-scroller {

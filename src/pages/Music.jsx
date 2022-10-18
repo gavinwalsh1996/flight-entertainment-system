@@ -1,9 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 //Components
 import MusicPlayer from '../components/MusicPlayer';
 import SongSlider from '../components/SongSlider';
-
 
 //Song Images 
 import Drake from '../images/Drake.jpg'
@@ -79,59 +78,59 @@ const songs = [
     songFile: AdelleHello
   },
   {
-    artist: 'Juice Wrld',
-    songName: 'Lucid Dreams',
-    poster: JuiceWrld,
-    songFile: JuiceWrldLucidDreams
-  },
-  {
     artist: 'Kings of Leon',
     songName: 'Pyro',
     poster: KingsOfLeon,
     songFile: KingsOfLeonPyro
   },
   {
-    artist: 'Brittney Spears',
-    songName: 'Toxic',
-    poster: BrittneySpears,
-    songFile: BrittneySpearsToxic
+    artist: 'Juice Wrld',
+    songName: 'Lucid Dreams',
+    poster: JuiceWrld,
+    songFile: JuiceWrldLucidDreams
   },
-  {
-    artist: 'Weeknd',
-    songName: 'Starboy',
-    poster: Weeknd,
-    songFile: WeekndStarboy
-  },
-  {
-    artist: 'Lil Mosey',
-    songName: 'Noticed',
-    poster: LilMosey,
-    songFile: LilMoseyNoticed
-  },
-  {
-    artist: 'Chainsmokers',
-    songName: 'Just like this',
-    poster: ChainSmokers,
-    songFile: ChainSmokersSomething
-  },
-  {
-    artist: 'RHCP',
-    songName: 'Under The Bridge',
-    poster: RedHotChilliPeppers,
-    songFile: RhcpUnderTheBridge
-  },
-  {
-    artist: 'Taylor Swift',
-    songName: 'Lover',
-    poster: TaylorSwift,
-    songFile: TaylorSwiftLover
-  },
-  {
-    artist: 'Elvis',
-    songName: 'Return To Sender',
-    poster: Elvis,
-    songFile: ElvisReturnToSender
-  }
+  //  {
+  //    artist: 'Brittney Spears',
+  //    songName: 'Toxic',
+  //    poster: BrittneySpears,
+  //    songFile: BrittneySpearsToxic
+  //  },
+  //  {
+  //    artist: 'Weeknd',
+  //    songName: 'Starboy',
+  //    poster: Weeknd,
+  //    songFile: WeekndStarboy
+  //  },
+  //  {
+  //    artist: 'Lil Mosey',
+  //    songName: 'Noticed',
+  //    poster: LilMosey,
+  //    songFile: LilMoseyNoticed
+  //  },
+  //  {
+  //    artist: 'Chainsmokers',
+  //    songName: 'Just like this',
+  //    poster: ChainSmokers,
+  //    songFile: ChainSmokersSomething
+  //  },
+  //  {
+  //    artist: 'RHCP',
+  //    songName: 'Under The Bridge',
+  //    poster: RedHotChilliPeppers,
+  //    songFile: RhcpUnderTheBridge
+  //  },
+  //  {
+  //    artist: 'Taylor Swift',
+  //    songName: 'Lover',
+  //    poster: TaylorSwift,
+  //    songFile: TaylorSwiftLover
+  //  },
+  //  {
+  //    artist: 'Elvis',
+  //    songName: 'Return To Sender',
+  //    poster: Elvis,
+  //    songFile: ElvisReturnToSender
+  //  }
 
 ]
 
@@ -144,77 +143,78 @@ const ambience = [
         poster: CalmStudyImg,
         aambienceFile: CalmStudy
     },
-    {
-        artist: 'Calm Ocean',
-        songName: 'Ambience',
-        poster: CalmOceanImg,
-        aambienceFile: CalmOcean
-    },
-    {
-        artist: 'Coffee Shop',
-        songName: 'Ambience',
-        poster: CoffeeShopImg,
-        aambienceFile: CoffeeShop
-    },
-    {
-        artist: 'Elevator Music',
-        songName: 'Ambience',
-        poster: ElevatorMusicImg,
-        aambienceFile: ElevatorMusic
-    },
-    {
-        artist: 'Falling Rain',
-        songName: 'Ambience',
-        poster: FallingRainImg,
-        aambienceFile: FallingRain
-    },
-    {
-        artist: 'Jazz',
-        songName: 'Ambience',
-        poster: JazzMusicImg,
-        aambienceFile: JazzMusic
-    },
     // {
-    //     artist: 'Noisy Neighbours',
+    //     artist: 'Calm Ocean',
     //     songName: 'Ambience',
-    //     poster: NoisyNeighboursImg,
-    //     aambienceFile: NoisyNeighbours
+    //     poster: CalmOceanImg,
+    //     aambienceFile: CalmOcean
     // },
-    {
-        artist: 'Relaxing Piano',
-        songName: 'Ambience',
-        poster: RelaxingPianoImg,
-        aambienceFile: RelaxingPiano
-    },
-    {
-        artist: 'Seaside',
-        songName: 'Ambience',
-        poster: SeasideImg,
-        aambienceFile: Seaside
-    },
-    {
-        artist: 'Swamp',
-        songName: 'Ambience',
-        poster: SwampImg,
-        aambienceFile: Swamp
-    },
-    {
-        artist: 'Space',
-        songName: 'Ambience',
-        poster: SpaceImg,
-        aambienceFile: Space
-    },
-    {
-        artist: 'White Noise',
-        songName: 'Ambience',
-        poster: WhiteNoiseImg,
-        aambienceFile: WhiteNoise
-    },
+    //  {
+    //      artist: 'Coffee Shop',
+    //      songName: 'Ambience',
+    //      poster: CoffeeShopImg,
+    //      aambienceFile: CoffeeShop
+    //  },
+    //  {
+    //      artist: 'Elevator Music',
+    //      songName: 'Ambience',
+    //      poster: ElevatorMusicImg,
+    //      aambienceFile: ElevatorMusic
+    //  },
+    //  {
+    //      artist: 'Falling Rain',
+    //      songName: 'Ambience',
+    //      poster: FallingRainImg,
+    //      aambienceFile: FallingRain
+    //  },
+    //  {
+    //      artist: 'Jazz',
+    //      songName: 'Ambience',
+    //      poster: JazzMusicImg,
+    //      aambienceFile: JazzMusic
+    //  },
+      // {
+      //     artist: 'Noisy Neighbours',
+      //     songName: 'Ambience',
+      //     poster: NoisyNeighboursImg,
+      //     aambienceFile: NoisyNeighbours
+      // },
+     {
+         artist: 'Relaxing Piano',
+         songName: 'Ambience',
+         poster: RelaxingPianoImg,
+         aambienceFile: RelaxingPiano
+     },
+     {
+         artist: 'Seaside',
+         songName: 'Ambience',
+         poster: SeasideImg,
+         aambienceFile: Seaside
+     },
+     {
+         artist: 'Swamp',
+         songName: 'Ambience',
+         poster: SwampImg,
+         aambienceFile: Swamp
+     },
+     {
+         artist: 'Space',
+         songName: 'Ambience',
+         poster: SpaceImg,
+         aambienceFile: Space
+     },
+     {
+         artist: 'White Noise',
+         songName: 'Ambience',
+         poster: WhiteNoiseImg,
+         aambienceFile: WhiteNoise
+     }
 ]
 
 
 
 function Music() {
+
 
     return (
 
@@ -223,13 +223,13 @@ function Music() {
         <div className="title">
             <h3>Today's Picks</h3>
         </div>
-          <SongSlider songs={songs}/>
+          <SongSlider songs={songs} />
           
         <div className="title">
             <h3>Ambience</h3>
         </div>
-          <SongSlider songs={ambience}/>
-          <MusicPlayer songs={songs}/>
+          <SongSlider songs={ambience} />
+          <MusicPlayer songs={songs} />
       </div>
      
     );

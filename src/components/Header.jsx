@@ -71,10 +71,12 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
 
 <Routes>
 
-    <Route path='/' element={<Home/>} />
-    <Route path='/movies' element={<Movies movies={movies} topMovies={topMovies}/>}/>
+    <Route path='/' element={<Home movies={movies}/>} />
+    <Route path='/movies' element={<Movies movies={movies} topMovies={topMovies} />}/>
     <Route path='/kids' element={<Kids kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries}/>} />
-    <Route path='/music' element={<Music/>} />
+    <Route path='/music' element={<React.Suspense fallback='Loading...'>
+        <Music />
+    </React.Suspense>} />
 
     {/* elements*/}
 
