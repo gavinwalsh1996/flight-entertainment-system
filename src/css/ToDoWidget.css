@@ -4,7 +4,9 @@
     /* padding: 20px; */
     display: flex;
     gap: 5px;
-    flex-direction: column;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
     position: relative;
     background-color: #2c2c2c;
     /* border: 1px solid white; */
@@ -57,7 +59,7 @@
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 1.5rem;
+    font-size: 1.5.rem;
 }
 
 h4 {
@@ -67,3 +69,39 @@ h4 {
     font-size: large;
 }
 
+.things-todo {
+    position: absolute;
+    z-index: 1000;
+    /* display: flex; */
+    gap: 2rem;
+    font-size: large;
+}
+
+.todo-title {
+    padding: 1rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.todos {
+    display: flex;
+}
+
+/* h3 {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+} */
+
+@media screen and (max-width: 1120px) {
+    .todos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .todo-title {
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

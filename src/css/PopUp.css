@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1000;
 }
 
 .popup-inner {
@@ -16,7 +17,10 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    background-color: #313131;
+    /* background-color: #313131; */
+    background-image: url('../images/greeting-message.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
     border-radius: 10px;
     height: 300px;
 }
@@ -30,6 +34,7 @@
 }
 
 .popup-text {
-    color: rgb(255, 255, 255);
+    color: black;
+    font-size: large;
     text-align: center;
 }

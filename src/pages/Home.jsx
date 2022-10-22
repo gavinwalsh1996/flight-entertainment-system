@@ -164,7 +164,6 @@ const products = [
         </div>
 
         <div className="main-section-two">
-            {/* <Weather /> */}
             <div className="genre">
               <h3>Food, Drinks & Accessories</h3>
             </div>

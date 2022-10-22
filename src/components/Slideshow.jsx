@@ -21,10 +21,7 @@ let posters = movies.map(m => m.poster_path)
 useEffect(() => {
     setTimeout(
       () =>
-        setIndex((prevIndex) =>
-          prevIndex === posters.length - 1 ? 0 : prevIndex + 1
-        ),
-      delay
+        setIndex((prevIndex) => prevIndex === posters.length - 1 ? 0 : prevIndex + 1), delay
     );
 
     return () => {};

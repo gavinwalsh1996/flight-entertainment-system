@@ -14,12 +14,8 @@ import IconButton from '@mui/material/IconButton'
 
 
 
-function MusicPlayer({songs}) {
+function MusicPlayer({songs, songFiles}) {
 
-    //Song Files
-    const songFiles = songs.map(song => song.songFile)
-
-    
     //Hooks
     const audioPlayer = useRef()
 
