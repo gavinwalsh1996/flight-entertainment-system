@@ -13,8 +13,7 @@ import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 import IconButton from '@mui/material/IconButton'
 
 
-
-function MusicPlayer({songs, songFiles}) {
+function MusicPlayer({songFiles}) {
 
     //Hooks
     const audioPlayer = useRef()
