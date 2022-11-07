@@ -1,5 +1,5 @@
 .widget-container {
-    width: 100%;
+    width: 80%;
     height: 20vh;
     /* padding: 20px; */
     display: flex;
@@ -87,6 +87,10 @@ h4 {
     display: flex;
 }
 
+.todo {
+    font-size: 1.1rem;
+}
+
 /* h3 {
     position: absolute;
     z-index: 1000;
@@ -105,3 +109,13 @@ h4 {
         text-align: center;
     }
 }
+
+@media (max-width: 500px) {
+
+    .todo {
+       font-size: .8rem;
+       text-align: center;
+    }   
+   
+   }
+   

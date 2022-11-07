@@ -99,7 +99,7 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
       </div>
 
       <div className="music-player">
-        {/* <MusicPlayer /> */}
+        <MusicPlayer />
       </div>
   
 

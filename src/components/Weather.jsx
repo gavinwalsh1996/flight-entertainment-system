@@ -31,7 +31,7 @@ getWeather();
         <div className="weather-one">
             <div className="city">
                 <h3>Barcelona</h3>
-                <h1 className='temp'>{weatherDetails.main?.temp}°C</h1>
+                <h1 className='temp'>{Math.round(weatherDetails.main?.temp)}°C</h1>
             </div>
             <div className="current-weather">
                 <h3 className='current'>Sunny</h3>
@@ -39,15 +39,15 @@ getWeather();
         </div>
         <div className="weather-two">
             <div className="">
-                <p>{weatherDetails.main?.feels_like}°C</p>
+                <p>{Math.round(weatherDetails.main?.feels_like)}°C</p>
                 <p className='weather-details'>Feels Like</p>
             </div>
             <div className="">
-                <p>{weatherDetails.main?.humidity}%</p>
+                <p>{Math.round(weatherDetails.main?.humidity)}%</p>
                 <p className='weather-details'>Humidity</p>
             </div>
             <div className="">
-                <p>{weatherDetails.wind?.speed} MPH</p>
+                <p>{Math.round(weatherDetails.wind?.speed)} MPH</p>
                 <p className='weather-details'>Wind Speed</p>
             </div>
         </div>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Image from '../images/Juicewrld.jpg'
+// import Image from '../images/Juicewrld.jpg'
 
 //CSS
 import '../css/MiniSlider.css'

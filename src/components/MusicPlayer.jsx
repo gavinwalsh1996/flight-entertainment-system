@@ -13,14 +13,17 @@ import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 import IconButton from '@mui/material/IconButton'
 
 
-function MusicPlayer({songFiles}) {
+function MusicPlayer({songFiles, songClicked}) {
+    console.log(songClicked)
+
 
     //Hooks
     const audioPlayer = useRef()
 
     //State
     const [index, setIndex] = useState(0);
-    const [currentSong] = useState(songFiles[index]);
+    // const [currentSong] = useState(songFiles[index]);
+    const [currentSong] = useState(songClicked);
     const [isPlaying, setisPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [mute, setMute] = useState(false);

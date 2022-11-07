@@ -5,10 +5,10 @@ import MusicPlayer from '../components/MusicPlayer';
 import SongGrid from '../components/SongGrid';
 
 //Song Images 
- import Drake from '../images/Drake.jpg'
- import Adelle from '../images/adelle.png'
- import JuiceWrld from '../images/Juicewrld.jpg'
- import KingsOfLeon from '../images/Pyroalbum.jpg'
+//  import Drake from '../images/Drake.jpg'
+//  import Adelle from '../images/adelle.png'
+//  import JuiceWrld from '../images/Juicewrld.jpg'
+//  import KingsOfLeon from '../images/Pyroalbum.jpg'
 
 
 //Song files
@@ -25,41 +25,42 @@ const songs = [
   {
     artist: 'Drake',
     songName: 'One Dance',
-    poster: Drake,
+    // poster: Drake,
     songFile: DrakeOneDance
   },
   {
     artist: 'Adelle',
     songName: 'Hello',
-    poster: Adelle,
+    // poster: Adelle,
     songFile: AdelleHello
   },
   {
      artist: 'Kings of Leon',
      songName: 'Pyro',
-     poster: KingsOfLeon,
+    //  poster: KingsOfLeon,
      songFile: KingsOfLeonPyro
    },
    {
      artist: 'Juice Wrld',
      songName: 'Lucid Dreams',
-     poster: JuiceWrld,
+    //  poster: JuiceWrld,
      songFile: JuiceWrldLucidDreams
    }
   ]
 
 
-
 function Music() {
 
-  const songFiles = songs.map(song => song.songName)
+  const [songClicked, setSongClicked] = useState();
+
+  const songFiles = songs.map(song => song.songFile)
 
 
       return (
 
         <div className='music-container'>
-            <SongGrid songs={songs} />
-            <MusicPlayer songs={songs} songFiles={songFiles}/>
+            <SongGrid songs={songs} setSongClicked={setSongClicked} songFiles={songFiles} />
+            {/* <MusicPlayer songs={songs} songFiles={songFiles} songClicked={songClicked}/> */}
         </div>
       
       );
