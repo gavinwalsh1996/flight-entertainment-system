@@ -157,7 +157,7 @@ p {
 }
 
 .media-element > img {
-    inline-size: 100%;
+    /* inline-size: 100%; */
     width: 150px;
     height: 100%;
     object-fit: cover;
