@@ -55,7 +55,7 @@ const [topMovies, setTopMovies] = useState([])
 const [kidsMovies, setKidsMovies] = useState([])
 const [setKidsTv] = useState([])
 //kidsTv
-const [setTvShows] = useState([])
+const [TvShows, setTvShows] = useState([])
 //TvShows
 const [kidsTvSeries, setKidsTvSeries] = useState([])
 
@@ -73,23 +73,36 @@ const topPicks = 'https://api.themoviedb.org/3/movie/top_rated?api_key=1f7c961ae
 const kidsSeries = 'https://api.themoviedb.org/3/discover/tv?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=10762'
 
 //Async function to fetch API
-async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
+// async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
 
-  await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
-  await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
-  await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
-  await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
-  await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
-  await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
-}
+//   await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
+//   await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
+//   await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
+//   await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
+//   await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
+//   await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
+// }
 
 
 
-//Use Effect 
- useEffect(() => { 
+// //Use Effect 
+//  useEffect(() => { 
+//   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
+
+// }, [])
+
+useEffect(() => {
+  function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
+    fetch(url).then(res => res.json()).then(data => setMovies(data.results))
+    fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
+    fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
+    fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
+    fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
+    fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
+  }
+
   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
-
-}, [])
+}, [setMovies, setTopMovies, setKidsMovies, setKidsTv, setKidsTvSeries])
 
 
   return (
@@ -97,7 +110,7 @@ async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kid
     <div className='app'>
 
       <div className="header">
-        <Header Home={Home} Movies={Movies} Kids={Kids} Music={lazyMusic} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} />
+        <Header Home={Home} Movies={Movies} Kids={Kids} Music={lazyMusic} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} TvShows={TvShows} />
       </div>
 
       <div className="music-player">
