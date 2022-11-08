@@ -6,7 +6,7 @@ import '../css/Weather.css'
 function Weather() {
 
 // API 
-const URL = 'https://api.openweathermap.org/data/2.5/weather?q=barcelona&appid=fc676f0a98ebdc2ee6424a83bb7de1f8';
+// const URL = 'https://api.openweathermap.org/data/2.5/weather?q=barcelona&appid=fc676f0a98ebdc2ee6424a83bb7de1f8';
 
 // State 
 const [weatherDetails, setWeatherDetails] = useState({});

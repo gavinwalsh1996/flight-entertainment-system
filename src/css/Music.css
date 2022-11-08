@@ -1,6 +1,7 @@
 .music-container {
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
+    height: 93.2vh;
     width: 100vw;
     flex-direction: column;
     justify-content: space-between;

@@ -86,7 +86,7 @@ select {
         overflow-x: auto;
         overscroll-behavior-inline: contain;
         background-color: #222222;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         /* height: 200px; */
     }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 //Components
-import MusicPlayer from '../components/MusicPlayer';
+// import MusicPlayer from '../components/MusicPlayer';
 import SongGrid from '../components/SongGrid';
 
 //Song Images 
@@ -51,7 +51,8 @@ const songs = [
 
 function Music() {
 
-  const [songClicked, setSongClicked] = useState();
+  const [setSongClicked] = useState();
+  //songClicked
 
   const songFiles = songs.map(song => song.songFile)
 

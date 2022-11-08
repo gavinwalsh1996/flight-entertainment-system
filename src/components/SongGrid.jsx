@@ -1,5 +1,5 @@
-import { Select } from '@mui/material';
-import React, { useState } from 'react';
+// import { Select } from '@mui/material';
+import React from 'react';
 import '../css/SongGrid.css'
 import Rock from '../images/Rock-img.png'
 import Jazz from '../images/jazz.jpg'
@@ -21,12 +21,12 @@ function SongGrid({songs, setSongClicked, songFiles}) {
 
     <div className="song-main-container">
         <div className="song-container">
-            <img src={Rap} onClick={() => getSong(0)} />
-            <img src={Rock} onClick={() => getSong(1)} />
+            <img src={Rap} onClick={() => getSong(0)} alt='' />
+            <img src={Rock} onClick={() => getSong(1)} alt='' />
         </div>
         <div className="song-container">
-            <img src={Trending} onClick={() => getSong(2)} />
-            <img src={Jazz} onClick={() => getSong(3)} />
+            <img src={Trending} onClick={() => getSong(2)} alt='' />
+            <img src={Jazz} onClick={() => getSong(3)} alt='' />
         </div>
     </div>
 

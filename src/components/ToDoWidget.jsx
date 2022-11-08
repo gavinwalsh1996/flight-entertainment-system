@@ -9,7 +9,7 @@ function ToDoWidget() {
   return (
 
     <div className="widget-container">
-      <img src={barcelona} className='widget-img' />
+      <img src={barcelona} className='widget-img' alt='' />
       {/* style={{backgroundImage: `url(${barcelona})`}} */}
         {/* <h4>Top 5 things to see in Barcelona:</h4>
         <div className="todo-one">- Sangrada Familia</div>

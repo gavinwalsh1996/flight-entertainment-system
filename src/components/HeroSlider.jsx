@@ -1,7 +1,7 @@
 // import { width } from '@mui/system';
-import React, {useState }from 'react';
-import FilterButton from './FilterButton';
-import Youtube from 'react-youtube'
+import React from 'react';
+// import FilterButton from './FilterButton';
+// import Youtube from 'react-youtube'
 
 //Test
 // import YouTube from 'react-youtube';
@@ -21,7 +21,7 @@ return (
         {/* <Youtube /> */}
 
         <div className="bg-image">
-            <img src={'https://image.tmdb.org/t/p/w500' + selectMovie.backdrop_path} className="banner-img" />
+            <img src={'https://image.tmdb.org/t/p/w500' + selectMovie.backdrop_path} className="banner-img" alt='' />
         </div>
         <div className="movie-details">
             <h1>{selectMovie.original_title}</h1>

@@ -43,7 +43,7 @@ const filterByType = type => {
         
         
         <div className="mini-media-element">
-            <img src={item.image} />
+            <img src={item.image} alt='' />
             <p className='item-name'>{item.name}</p>
         </div>
 

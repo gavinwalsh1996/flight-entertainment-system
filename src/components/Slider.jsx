@@ -1,5 +1,5 @@
 // import { width } from '@mui/system';
-import React, { useState }from 'react';
+import React from 'react';
 
 
 
@@ -19,7 +19,7 @@ return (
 
 
         <div className="media-element">
-            <img src={'https://image.tmdb.org/t/p/w500' + image.poster_path} onClick={()=>{setSelectMovie(image)}} />
+            <img src={'https://image.tmdb.org/t/p/w500' + image.poster_path} onClick={()=>{setSelectMovie(image)}} alt='' />
             {/* onClick={()=>{setSelectMovie(image)}}  */}
         </div>
 

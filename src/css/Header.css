@@ -56,7 +56,7 @@ a:hover {
     background-color: #222222;
     color: white;
     display: none;
-    justify-content: end;
+    justify-content: flex-end;
     gap: 30px;
     cursor: pointer;
 }

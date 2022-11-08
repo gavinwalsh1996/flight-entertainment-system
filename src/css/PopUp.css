@@ -38,3 +38,27 @@
     font-size: large;
     text-align: center;
 }
+
+@media (max-width: 770px) {
+
+    .popup-inner {
+        position: relative;
+        padding: 32px;
+        width: 100%;
+        max-width: 440px;
+        /* background-color: #313131; */
+        background-image: url('../images/greeting-message.jpg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        border-radius: 10px;
+        height: 200px;
+    } 
+
+    .popup-text {
+        color: black;
+        font-size: small;
+        text-align: center;
+    }
+    
+
+}
