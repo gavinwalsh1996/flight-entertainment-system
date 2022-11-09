@@ -8,9 +8,9 @@ import Trending from '../images/trending.jpg'
 
 
 
-function SongGrid({songs, setSongClicked, songFiles}) {
+function SongGrid({songs, setSongClicked}) {
 
-  // let songFile = songs.map(song => song.songFile)
+  let songFiles = songs.map(song => song.songFile)
 
 
   function getSong(index) {

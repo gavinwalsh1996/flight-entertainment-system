@@ -11,7 +11,7 @@ import Timer from '../components/Timer'
 
 
 
-function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsTvSeries}) {
+function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsTvSeries, songs, setSongClicked}) {
 
   return (
     
@@ -75,7 +75,7 @@ function Header({Home, Movies, Kids, Music, movies, kidsMovies, topMovies, kidsT
     <Route path='/movies' element={<Movies movies={movies} topMovies={topMovies} />}/>
     <Route path='/kids' element={<Kids kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries}/>} />
     <Route path='/music' element={<React.Suspense fallback='Loading...'>
-        <Music />
+        <Music songs={songs} setSongClicked={setSongClicked}/>
     </React.Suspense>} />
 
     {/* elements*/}

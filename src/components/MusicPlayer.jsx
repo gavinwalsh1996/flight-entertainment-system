@@ -11,22 +11,41 @@ import VolumeUpIcon from '@mui/icons-material/VolumeUp';
 import VolumeOffIcon from '@mui/icons-material/VolumeOff';
 import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 import IconButton from '@mui/material/IconButton'
+import {songContext} from '../pages/Context'
+import { useContext } from 'react';
 
 
-function MusicPlayer({songFiles, songClicked}) {
-    console.log(songClicked)
 
+function MusicPlayer({songs}) {
+
+      //Test 
+const songFiles = songs.map(song => song.songFile)
 
     //Hooks
     const audioPlayer = useRef()
 
     //State
     const [index, setIndex] = useState(0);
-    // const [currentSong] = useState(songFiles[index]);
-    const [currentSong] = useState(songClicked);
+    const { songClicked, setSongClicked } = useContext(songContext)
+    const [currentSong, setCurrentSong] = useState(songClicked);
     const [isPlaying, setisPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [mute, setMute] = useState(false);
+
+
+     useEffect(() => {
+        setCurrentSong(songClicked)
+        
+         if (songClicked) {
+             audioPlayer.current.play()
+         }
+        
+         if (songClicked) {
+             togglePlay()
+         }
+
+     }, [songClicked])
+ 
 
     useEffect(() => {
         if(audioPlayer) {
@@ -83,7 +102,7 @@ function MusicPlayer({songFiles, songClicked}) {
 
     <div className='music-player-container'>
 
-    <audio src={currentSong} ref={audioPlayer} muted={mute} />    
+    <audio src={currentSong} ref={audioPlayer} muted={mute} webkit-playsinline="true" playsInline="true" autoplay="" />   
 
         <div className="controls">
 

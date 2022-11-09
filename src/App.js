@@ -1,5 +1,19 @@
 import React, { useState, useEffect } from 'react';
-// import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { songContext } from './pages/Context';
+
+//Components
+import MusicPlayer from './components/MusicPlayer';
+import Header from './components/Header'
+
+//Song files
+// import JuiceWrldLucidDreams from './music/Lucid_Dreams.mp3'
+// import Blues from './music/Blues.mp3'
+// import Rock from './music/rock.mp3'
+// import Trending from './music/Oliver-Tree.mp3'
+import Pyro from './music/Pyro.mp3'
+import Fade from './music/Fade.mp3'
+import Rhcp from './music/Rhcp.mp3'
+import Toxic from './music/Toxic.mp3'
 
 //CSS
 import './css/Header.css'
@@ -10,37 +24,49 @@ import './css/Home.css'
 import './css/HeroSlider.css'
 import './css/FilterButton.css'
 import './css/MusicPlayer.css'
-// import { Delete } from '@mui/icons-material';
-
-// MUI ICONS
-// import { styled, Typography, Stack, Box } from '@mui/material';
-
-//Components
-import Header from './components/Header'
-import MusicPlayer from './components/MusicPlayer';
 
 //Pages
 import Home from './pages/Home';
 import Kids from './pages/Kids';
 import Movies from './pages/Movies';
-// import Music from './pages/Music'
-// import Music from './pages/Music'
+
+// Check
 const lazyMusic = React.lazy(() => import('./pages/Music'))
 
+// Movie API keys
+const API_URL = 'https://api.themoviedb.org/3';
+const API_KEY = 'api_key=1f7c961ae4f02a23e0968d449c15bc98'
 
-// import { Slider } from '@mui/material';
-// import SkipPreviousIcon from '@mui/icons-material/SkipPrevious';
-// import SkipNextIcon from '@mui/icons-material/SkipNext';
-// import PlayArrowIcon from '@mui/icons-material/PlayArrow';
-// import PauseIcon from '@mui/icons-material/Pause';
-// import VolumeDownIcon from '@mui/icons-material/VolumeDown';
-// import VolumeUpIcon from '@mui/icons-material/VolumeUp';
-// import VolumeOffIcon from '@mui/icons-material/VolumeOff';
-// import VolumeMuteIcon from '@mui/icons-material/VolumeMute';
 
-// const API_URL = 'https://api.themoviedb.org/3';
-// const API_KEY = 'api_key=1f7c961ae4f02a23e0968d449c15bc98'
+//Songs array 
 
+const songs = [
+  
+  {
+    artist: 'Blues Mix',
+    songName: 'Blues Mix',
+    poster: 'Blues',
+    songFile: Pyro
+  },
+  {
+    artist: 'Rock Mix',
+    songName: 'Rock Mix',
+    poster: 'Rock',
+    songFile: Fade
+  },
+  {
+     artist: 'Top-Trending Mix',
+     songName: 'Top-Trending Mix',
+     poster: 'Top Trending',
+     songFile: Rhcp
+   },
+   {
+     artist: 'Hip-Hop Mix',
+     songName: 'Hip-Hop Mix',
+     poster: 'Hip-Hop Mix',
+     songFile: Toxic
+   }
+  ]
 
 
 
@@ -53,72 +79,63 @@ function App() {
 const [movies, setMovies] = useState([])
 const [topMovies, setTopMovies] = useState([])
 const [kidsMovies, setKidsMovies] = useState([])
-const [setKidsTv] = useState([])
-//kidsTv
+const [kidsTv, setKidsTv] = useState([])
 const [TvShows, setTvShows] = useState([])
-//TvShows
 const [kidsTvSeries, setKidsTvSeries] = useState([])
 
-//Test 
-// const [selectMovie, setSelectMovie] = useState(movies[3]);
+
 
 
 //API URL 
 const url = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=28/';
+// let test = 'http://api.themoviedb.org/3/movie/131634/videos?api_key=1f7c961ae4f02a23e0968d449c15bc98'
 const tvUrl = 'https://api.themoviedb.org/3/tv/popular?api_key=1f7c961ae4f02a23e0968d449c15bc98&language=en-US&page=1';
 const kidsMovieURL = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&certification_country=US&certification.lte=G&with_genres=16&include_adult=false&sort_by=popularity.desc';
 const kidsTvURL = 'https://api.themoviedb.org/3/tv/popular?api_key=1f7c961ae4f02a23e0968d449c15bc98&language=en-US&page=1&with_genres=16&include_adult=false&sort_by=popularity.desc';
-const topPicks = 'https://api.themoviedb.org/3/movie/top_rated?api_key=1f7c961ae4f02a23e0968d449c15bc98&language=en-US&page=1';
+const topPicks = 'https://api.themoviedb.org/3/movie/top_rated?api_key=1f7c961ae4f02a23e0968d449c15bc98&${process.env.API_KEY}&language=en-US&page=1';
 // const kidsAnimatedMovies = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=16';
 const kidsSeries = 'https://api.themoviedb.org/3/discover/tv?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=10762'
 
 //Async function to fetch API
-// async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
+async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
 
-//   await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
-//   await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
-//   await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
-//   await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
-//   await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
-//   await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
-// }
+  await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
+  await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
+  await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
+  await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
+  await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
+  await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
+}
 
 
 
-// //Use Effect 
-//  useEffect(() => { 
-//   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
-
-// }, [])
-
-useEffect(() => {
-  function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
-    fetch(url).then(res => res.json()).then(data => setMovies(data.results))
-    fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
-    fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
-    fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
-    fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
-    fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
-  }
-
+//Use Effect 
+ useEffect(() => { 
   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
-}, [setMovies, setTopMovies, setKidsMovies, setKidsTv, setKidsTvSeries])
+
+}, [])
+
+const [songClicked, setSongClicked] = useState({})
 
 
   return (
 
+  <songContext.Provider value={{songClicked, setSongClicked}}>
+
     <div className='app'>
 
-      <div className="header">
-        <Header Home={Home} Movies={Movies} Kids={Kids} Music={lazyMusic} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} TvShows={TvShows} />
-      </div>
+      {/* <div className="header"> */}
+        <Header Home={Home} Movies={Movies} Kids={Kids} Music={lazyMusic} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} songs={songs} setSongClicked={setSongClicked} />
+      {/* </div> */}
 
       <div className="music-player">
-        <MusicPlayer />
+        {/* <MusicPlayer /> */}
+        <MusicPlayer songs={songs} songClicked={songClicked}/>
       </div>
   
 
     </div>
+    </songContext.Provider>
   )
 }
 
