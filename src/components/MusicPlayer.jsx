@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 
 // MUI ICONS
 import { Slider } from '@mui/material';
@@ -26,14 +26,38 @@ const songFiles = songs.map(song => song.songFile)
 
     //State
     const [index, setIndex] = useState(0);
-    const { songClicked, setSongClicked } = useContext(songContext)
+    const { songClicked} = useContext(songContext)
+    // setSongClicked
     const [currentSong, setCurrentSong] = useState(songClicked);
     const [isPlaying, setisPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [mute, setMute] = useState(false);
 
 
-     useEffect(() => {
+    //  useEffect(() => {
+    //     setCurrentSong(songClicked)
+        
+    //      if (songClicked) {
+    //          audioPlayer.current.play()
+    //      }
+        
+    //      if (songClicked) {
+    //          togglePlay()
+    //      }
+
+    //  }, [songClicked])
+
+    const togglePlay = useCallback(() => {
+        if(!isPlaying) {
+            audioPlayer.current.play()
+        } else {
+            audioPlayer.current.pause()
+        }
+        // setisPlaying(prev => !prev)
+        setisPlaying(isPlaying => !isPlaying)
+    }, [isPlaying]);
+
+    useEffect(() => {
         setCurrentSong(songClicked)
         
          if (songClicked) {
@@ -43,8 +67,8 @@ const songFiles = songs.map(song => song.songFile)
          if (songClicked) {
              togglePlay()
          }
-
-     }, [songClicked])
+    
+     }, [songClicked, togglePlay])
  
 
     useEffect(() => {
@@ -54,15 +78,25 @@ const songFiles = songs.map(song => song.songFile)
     }, [volume]);
 
 
-    function togglePlay() {
-        if(!isPlaying) {
-            audioPlayer.current.play()
-        } else {
-            audioPlayer.current.pause()
-        }
-        // setisPlaying(prev => !prev)
-        setisPlaying(isPlaying => !isPlaying)
-    }
+    // function togglePlay() {
+    //     if(!isPlaying) {
+    //         audioPlayer.current.play()
+    //     } else {
+    //         audioPlayer.current.pause()
+    //     }
+    //     // setisPlaying(prev => !prev)
+    //     setisPlaying(isPlaying => !isPlaying)
+    // }
+
+    // const togglePlay = useCallback(() => {
+    //     if(!isPlaying) {
+    //         audioPlayer.current.play()
+    //     } else {
+    //         audioPlayer.current.pause()
+    //     }
+    //     // setisPlaying(prev => !prev)
+    //     setisPlaying(isPlaying => !isPlaying)
+    // }, [isPlaying]);
 
     function toggleSkipForward() {
         if(index >= songFiles.length - 1) {

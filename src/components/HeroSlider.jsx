@@ -26,7 +26,7 @@ return (
         <div className="movie-details">
             <h1>{selectMovie.original_title}</h1>
             <p>{selectMovie.overview}</p> 
-            <button className='trailer-btn'>Watch Trailer</button>
+            {/* <button className='trailer-btn'>Watch Trailer</button> */}
         </div>
 
     </div>
