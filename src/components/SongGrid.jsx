@@ -24,12 +24,12 @@ function SongGrid({songs, setSongClicked}) {
 
           <div className="songs">
             <img src={Rap} onClick={() => getSong(0)} alt='' />
-            <p>Drake, Weeknd, Juice Wrld</p>
+            <p className='song-name'>Drake, Weeknd, Juice Wrld</p>
           </div>
 
           <div className="songs">
             <img src={Rock} onClick={() => getSong(1)} alt='' />
-            <p>Kings of Leon, The Killers, RHCP</p>
+            <p className='song-name'>Kings of Leon, The Killers, RHCP</p>
           </div>
         </div>
 
@@ -37,12 +37,12 @@ function SongGrid({songs, setSongClicked}) {
 
           <div className="songs">
             <img src={Trending} onClick={() => getSong(2)} alt='' />
-            <p>Oliver Tree, Taylor Swift, Ye</p>
+            <p className='song-name'>Oliver Tree, Taylor Swift, Ye</p>
           </div>
 
           <div className="songs">
             <img src={Jazz} onClick={() => getSong(3)} alt='' />
-            <p>Big Mama Thornton, Ray Charles, B.B King</p>
+            <p className='song-name'>Big Mama Thornton, Ray Charles, B.B King</p>
           </div>
           
         </div>
