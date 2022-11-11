@@ -78,6 +78,7 @@ select {
 
 .item-name {
     pointer-events: none;
+    font-size: .7rem;
 }
 
 
