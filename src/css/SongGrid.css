@@ -37,8 +37,8 @@ img {
 
 @media screen and (max-width: 450px) {
     img {
-        height: 150px;
-        width: 150px;
+        height: 120px;
+        width: 120px;
     }
 
     .song-container {
@@ -46,5 +46,14 @@ img {
         gap: 1rem;
         flex-direction: column;
      }
+
+     .song-name {
+        font-size: .5rem;
+     }
+
+     .song-main-container div {
+        flex: 1;
+        text-align: center;
+    }
 }
 
