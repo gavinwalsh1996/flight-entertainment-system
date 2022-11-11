@@ -79,9 +79,9 @@ function App() {
 const [movies, setMovies] = useState([])
 const [topMovies, setTopMovies] = useState([])
 const [kidsMovies, setKidsMovies] = useState([])
-const [setKidsTv] = useState([])
+// const [setKidsTv] = useState([])
 //KidsTv
-const [setTvShows] = useState([])
+// const [setTvShows] = useState([])
 //TvShows
 const [kidsTvSeries, setKidsTvSeries] = useState([])
 
@@ -121,9 +121,9 @@ useEffect(() => {
   const getMoviesData = async function (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {  
     await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
     await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
-    await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
+    // await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
     await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
-    await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
+    // await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
     await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
   }
   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);

@@ -26,12 +26,24 @@ const songFiles = songs.map(song => song.songFile)
 
     //State
     const [index, setIndex] = useState(0);
-    const { songClicked} = useContext(songContext)
+    const {songClicked} = useContext(songContext)
     // setSongClicked
     const [currentSong, setCurrentSong] = useState(songClicked);
     const [isPlaying, setisPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [mute, setMute] = useState(false);
+
+    const togglePlay = useCallback(() => {
+        
+        if(!isPlaying) {
+                     audioPlayer.current.play()
+                 } else {
+                     audioPlayer.current.pause()
+                 }
+                 setisPlaying(isPlaying => !isPlaying)
+
+     }, [isPlaying]);
+    
 
 
     //  useEffect(() => {
@@ -47,28 +59,16 @@ const songFiles = songs.map(song => song.songFile)
 
     //  }, [songClicked])
 
-    const togglePlay = useCallback(() => {
-        if(!isPlaying) {
-            audioPlayer.current.play()
-        } else {
-            audioPlayer.current.pause()
-        }
-        // setisPlaying(prev => !prev)
-        setisPlaying(isPlaying => !isPlaying)
-    }, [isPlaying]);
+    //Test
 
     useEffect(() => {
-        setCurrentSong(songClicked)
-        
-         if (songClicked) {
-             audioPlayer.current.play()
-         }
-        
-         if (songClicked) {
-             togglePlay()
-         }
+        if (currentSong !== songClicked) {
+          setCurrentSong(songClicked)
+        }
+         
+     }, [songClicked, togglePlay, currentSong]);
     
-     }, [songClicked, togglePlay])
+     //Test
  
 
     useEffect(() => {
@@ -88,15 +88,20 @@ const songFiles = songs.map(song => song.songFile)
     //     setisPlaying(isPlaying => !isPlaying)
     // }
 
+    //Test
+
     // const togglePlay = useCallback(() => {
+        
     //     if(!isPlaying) {
-    //         audioPlayer.current.play()
-    //     } else {
-    //         audioPlayer.current.pause()
-    //     }
-    //     // setisPlaying(prev => !prev)
-    //     setisPlaying(isPlaying => !isPlaying)
-    // }, [isPlaying]);
+    //                  audioPlayer.current.play()
+    //              } else {
+    //                  audioPlayer.current.pause()
+    //              }
+    //              setisPlaying(isPlaying => !isPlaying)
+
+    //  }, []);
+
+    //Test
 
     function toggleSkipForward() {
         if(index >= songFiles.length - 1) {

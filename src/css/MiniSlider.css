@@ -76,6 +76,10 @@ select {
     border: 1px solid white;
 }
 
+.item-name {
+    pointer-events: none;
+}
+
 
 @media (max-width: 1280px) {
 
