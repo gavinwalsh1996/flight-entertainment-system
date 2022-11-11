@@ -140,7 +140,7 @@ p {
 
 .media-scroller {
     width: 100%;
-    height: 220px;
+    height: 260px;
     display: flex;
     gap: 10px;
     overflow-x: auto;
