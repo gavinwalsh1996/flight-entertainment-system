@@ -13,6 +13,18 @@ Mobile View:
 
 ![FES mobile](https://user-images.githubusercontent.com/101522330/201766494-2d64effb-b569-4f06-a367-9a176ae48941.png)
 
+<h1>Inspiration</h1>
+
+I was inspired to create this project when I was flying home to Ireland from Canada. When I was on the plane, I was thinking of ways to re-create the UI and create some of the existing features. I thought this would be a great project to add lots of things that I've learned to the same app instead of building them all individually.
+
+<h1>Summary</h1>
+
+This project was a real test for me as I created everything from scratch. It was also my first introduction to a lot of React concepts and features which I found very  challenging but a perfect learning lesson. 
+
+If I was to build this project again, I would do a lot of things differently and spend a lot more time on planning before building.
+
+With all that been said, this project took my development skills to the next level which will show in my next build.
+
 <h1>Built With</h1>
 
 - React.js
