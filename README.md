@@ -7,7 +7,7 @@ https://flight-entertainment-system.netlify.app/
 
 Desktop View : 
 
-![fes screenshot](https://user-images.githubusercontent.com/101522330/201765774-76bf86c5-6bde-41e3-9c55-a8f37cbe69ed.png)
+![fes-screenshot](https://user-images.githubusercontent.com/101522330/201959183-ec88d1b7-befa-4ffc-860f-c215a62f7349.png)
 
 Mobile View: 
 
