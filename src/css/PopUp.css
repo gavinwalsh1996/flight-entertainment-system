@@ -17,7 +17,6 @@
     padding: 32px;
     width: 100%;
     max-width: 640px;
-    /* background-color: #313131; */
     background-image: url('../images/greeting-message.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
@@ -46,7 +45,6 @@
         padding: 32px;
         width: 100%;
         max-width: 440px;
-        /* background-color: #313131; */
         background-image: url('../images/greeting-message.jpg');
         background-size: 100%;
         background-repeat: no-repeat;

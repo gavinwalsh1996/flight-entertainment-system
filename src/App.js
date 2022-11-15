@@ -5,15 +5,11 @@ import { songContext } from './pages/Context';
 import MusicPlayer from './components/MusicPlayer';
 import Header from './components/Header'
 
-//Song files
-// import JuiceWrldLucidDreams from './music/Lucid_Dreams.mp3'
-// import Blues from './music/Blues.mp3'
-// import Rock from './music/rock.mp3'
-// import Trending from './music/Oliver-Tree.mp3'
-import Pyro from './music/Pyro.mp3'
-import Fade from './music/Fade.mp3'
-import Rhcp from './music/Rhcp.mp3'
-import Toxic from './music/Toxic.mp3'
+//Song Files
+import Blues from './music/HoundDog.mp3'
+import Rock from './music/Pyro.mp3'
+import Trending from './music/Oliver-Tree.mp3'
+import Hiphop from './music/Lucid_Dreams.mp3'
 
 //CSS
 import './css/Header.css'
@@ -33,9 +29,6 @@ import Movies from './pages/Movies';
 // Check
 const lazyMusic = React.lazy(() => import('./pages/Music'))
 
-// Movie API keys
-// const API_URL = 'https://api.themoviedb.org/3';
-// const API_KEY = 'api_key=1f7c961ae4f02a23e0968d449c15bc98'
 
 
 //Songs array 
@@ -46,25 +39,25 @@ const songs = [
     artist: 'Blues Mix',
     songName: 'Blues Mix',
     poster: 'Blues',
-    songFile: Pyro
+    songFile: Blues
   },
   {
     artist: 'Rock Mix',
     songName: 'Rock Mix',
     poster: 'Rock',
-    songFile: Fade
+    songFile: Rock
   },
   {
      artist: 'Top-Trending Mix',
      songName: 'Top-Trending Mix',
      poster: 'Top Trending',
-     songFile: Rhcp
+     songFile: Trending
    },
    {
      artist: 'Hip-Hop Mix',
      songName: 'Hip-Hop Mix',
      poster: 'Hip-Hop Mix',
-     songFile: Toxic
+     songFile: Hiphop
    }
   ]
 
@@ -79,51 +72,24 @@ function App() {
 const [movies, setMovies] = useState([])
 const [topMovies, setTopMovies] = useState([])
 const [kidsMovies, setKidsMovies] = useState([])
-// const [setKidsTv] = useState([])
-//KidsTv
-// const [setTvShows] = useState([])
-//TvShows
 const [kidsTvSeries, setKidsTvSeries] = useState([])
-
-
 
 
 //API URL 
 const url = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=28/';
-// let test = 'http://api.themoviedb.org/3/movie/131634/videos?api_key=1f7c961ae4f02a23e0968d449c15bc98'
 const tvUrl = 'https://api.themoviedb.org/3/tv/popular?api_key=1f7c961ae4f02a23e0968d449c15bc98&language=en-US&page=1';
 const kidsMovieURL = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&certification_country=US&certification.lte=G&with_genres=16&include_adult=false&sort_by=popularity.desc';
 const kidsTvURL = 'https://api.themoviedb.org/3/tv/popular?api_key=1f7c961ae4f02a23e0968d449c15bc98&language=en-US&page=1&with_genres=16&include_adult=false&sort_by=popularity.desc';
 const topPicks = 'https://api.themoviedb.org/3/movie/top_rated?api_key=1f7c961ae4f02a23e0968d449c15bc98&language=en-US&page=1';
-// const kidsAnimatedMovies = 'https://api.themoviedb.org/3/discover/movie?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=16';
 const kidsSeries = 'https://api.themoviedb.org/3/discover/tv?api_key=1f7c961ae4f02a23e0968d449c15bc98&with_genres=10762'
 
-//Async function to fetch API
-// async function getMoviesData (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {
 
-//   await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
-//   await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
-//   await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
-//   await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
-//   await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
-//   await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
-// }
-
-
-
-// //Use Effect 
-//  useEffect(() => { 
-//   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
-
-// }, [])
 
 useEffect(() => {
   const getMoviesData = async function (url, tvUrl, topPicks, kidsMovieURL, kidsTvUrl, kidsSeries) {  
     await fetch(url).then(res => res.json()).then(data => setMovies(data.results))
     await fetch(topPicks).then(res => res.json()).then(data => setTopMovies(data.results))
-    // await fetch(tvUrl).then(res => res.json()).then(data => setTvShows(data.results))
     await fetch(kidsMovieURL).then(res => res.json()).then(data => setKidsMovies(data.results))
-    // await fetch(kidsTvUrl).then(res => res.json()).then(data => setKidsTv(data.results))
     await fetch(kidsSeries).then(res => res.json()).then(data => setKidsTvSeries(data.results))
   }
   getMoviesData(url, tvUrl, topPicks, kidsMovieURL, kidsTvURL, kidsSeries);
@@ -138,12 +104,9 @@ const [songClicked, setSongClicked] = useState({})
 
     <div className='app'>
 
-      {/* <div className="header"> */}
         <Header Home={Home} Movies={Movies} Kids={Kids} Music={lazyMusic} movies={movies} topMovies={topMovies} kidsMovies={kidsMovies} kidsTvSeries={kidsTvSeries} songs={songs} setSongClicked={setSongClicked} />
-      {/* </div> */}
 
       <div className="music-player">
-        {/* <MusicPlayer /> */}
         <MusicPlayer songs={songs} songClicked={songClicked}/>
       </div>
   

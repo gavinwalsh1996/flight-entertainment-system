@@ -18,8 +18,8 @@ import { useContext } from 'react';
 
 function MusicPlayer({songs}) {
 
-      //Test 
-const songFiles = songs.map(song => song.songFile)
+    //Test 
+    const songFiles = songs.map(song => song.songFile)
 
     //Hooks
     const audioPlayer = useRef()
@@ -27,11 +27,11 @@ const songFiles = songs.map(song => song.songFile)
     //State
     const [index, setIndex] = useState(0);
     const {songClicked} = useContext(songContext)
-    // setSongClicked
     const [currentSong, setCurrentSong] = useState(songClicked);
     const [isPlaying, setisPlaying] = useState(false);
     const [volume, setVolume] = useState(30);
     const [mute, setMute] = useState(false);
+
 
     const togglePlay = useCallback(() => {
         
@@ -45,30 +45,13 @@ const songFiles = songs.map(song => song.songFile)
      }, [isPlaying]);
     
 
-
-    //  useEffect(() => {
-    //     setCurrentSong(songClicked)
-        
-    //      if (songClicked) {
-    //          audioPlayer.current.play()
-    //      }
-        
-    //      if (songClicked) {
-    //          togglePlay()
-    //      }
-
-    //  }, [songClicked])
-
-    //Test
-
     useEffect(() => {
         if (currentSong !== songClicked) {
           setCurrentSong(songClicked)
         }
          
-     }, [songClicked, togglePlay, currentSong]);
+    }, [songClicked, togglePlay, currentSong]);
     
-     //Test
  
 
     useEffect(() => {
@@ -78,32 +61,10 @@ const songFiles = songs.map(song => song.songFile)
     }, [volume]);
 
 
-    // function togglePlay() {
-    //     if(!isPlaying) {
-    //         audioPlayer.current.play()
-    //     } else {
-    //         audioPlayer.current.pause()
-    //     }
-    //     // setisPlaying(prev => !prev)
-    //     setisPlaying(isPlaying => !isPlaying)
-    // }
 
-    //Test
-
-    // const togglePlay = useCallback(() => {
-        
-    //     if(!isPlaying) {
-    //                  audioPlayer.current.play()
-    //              } else {
-    //                  audioPlayer.current.pause()
-    //              }
-    //              setisPlaying(isPlaying => !isPlaying)
-
-    //  }, []);
-
-    //Test
 
     function toggleSkipForward() {
+
         if(index >= songFiles.length - 1) {
             setIndex(0);
             audioPlayer.current.src = songFiles[0];
@@ -117,6 +78,7 @@ const songFiles = songs.map(song => song.songFile)
 
 
     function toggleSkipBackward() {
+
         if(index > 0) {
             setIndex(prev => prev -1);
             audioPlayer.current.src = songFiles[index -1];
@@ -127,6 +89,7 @@ const songFiles = songs.map(song => song.songFile)
     
 
     function VolumeBtns() {
+
         return mute
             ? <VolumeOffIcon sx={{color: 'lime', '&:hover': {color: 'white'}}} onClick={() => setMute(!mute)} />
             : volume <= 20 ? <VolumeMuteIcon sx={{color: 'lime', '&:hover': {color: 'white'}}} onClick={() => setMute(!mute)} />
@@ -141,7 +104,7 @@ const songFiles = songs.map(song => song.songFile)
 
     <div className='music-player-container'>
 
-    <audio src={currentSong} ref={audioPlayer} muted={mute} webkit-playsinline="true" playsInline="true" autoplay="" />   
+        <audio src={currentSong} ref={audioPlayer} muted={mute} webkit-playsinline="true" playsInline="true" autoplay="" />   
 
         <div className="controls">
 

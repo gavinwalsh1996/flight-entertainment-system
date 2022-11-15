@@ -1,10 +1,9 @@
-// import { Select } from '@mui/material';
 import React from 'react';
 import '../css/SongGrid.css'
-import Rock from '../images/Rock-img.png'
-import Jazz from '../images/jazz.jpg'
-import Rap from '../images/randb.jpg'
-import Trending from '../images/trending.jpg'
+import Rock from '../images/Rock.png'
+import Blues from '../images/Blues.png'
+import Rap from '../images/HipHop.png'
+import Trending from '../images/Trending.png'
 
 
 
@@ -23,8 +22,8 @@ function SongGrid({songs, setSongClicked}) {
         <div className="song-container">
 
           <div className="songs">
-            <img src={Rap} onClick={() => getSong(0)} alt='' />
-            <p className='song-name'>Drake, Weeknd, Juice Wrld</p>
+            <img src={Rap} onClick={() => getSong(3)} alt='' />
+            <p className='song-name'>Juice Wrld, Weeknd, Drake</p>
           </div>
 
           <div className="songs">
@@ -41,7 +40,7 @@ function SongGrid({songs, setSongClicked}) {
           </div>
 
           <div className="songs">
-            <img src={Jazz} onClick={() => getSong(3)} alt='' />
+            <img src={Blues} onClick={() => getSong(0)} alt='' />
             <p className='song-name'>Big Mama Thornton, Ray Charles, B.B King</p>
           </div>
           

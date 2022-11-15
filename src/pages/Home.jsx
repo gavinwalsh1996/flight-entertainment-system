@@ -44,7 +44,6 @@ import '../css/Weather.css'
 function Home() {
 
 //State 
-// const [buttonPopUp, setButtonPopUp] = useState(false);
 const [timedPopUp, setTimedPopUp] = useState(false);
 
 
@@ -156,21 +155,6 @@ useEffect(() => {
     return (
       
       <div className='container'>
-
-        {/* <Slideshow />
-        <Weather />
-        <MiniSlider items={snacks}/>
-        <MiniSlider items={accessories}/>
-
-        <PopUp trigger={timedPopUp} setTrigger={setTimedPopUp}>
-          <h3 className='popup-text'>Welcome Aboard!</h3>
-          <br></br>
-          <p className='popup-text'>Please sit back and relax. We hope you enjoy your flight from Dublin (DUB) to Barcelona (BCN)</p>
-        </PopUp> */}
-
-        {/* <div className="hero-section">
-           <Slideshow movies={movies}/>
-        </div> */}
         
         <div className="main-section-one">
           <Weather />

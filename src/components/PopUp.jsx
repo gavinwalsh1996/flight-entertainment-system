@@ -1,6 +1,10 @@
 import React from 'react'
 import CloseIcon from '@mui/icons-material/Close';
+
+//CSS
 import '../css/PopUp.css'
+
+
 function PopUp(props) {
 
   return (props.trigger) ? (
