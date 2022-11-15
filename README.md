@@ -1,112 +1,63 @@
-# Getting Started with Create React App
+<h1>Flight Entertainment System</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+In flight entertainment system built with React.
+In this project, I make use of TMDB and Open Weather Map API's to gather information. This App also includes many different React Hooks and features such as React Router and React Context.
 
-## Available Scripts
+https://flight-entertainment-system.netlify.app/
+
+Desktop View : 
+
+![fes screenshot](https://user-images.githubusercontent.com/101522330/201765774-76bf86c5-6bde-41e3-9c55-a8f37cbe69ed.png)
+
+Mobile View: 
+
+![FES mobile](https://user-images.githubusercontent.com/101522330/201766494-2d64effb-b569-4f06-a367-9a176ae48941.png)
+
+<h1>Inspiration</h1>
+
+I was inspired to create this project when I was flying home to Ireland from Canada. When I was on the plane, I was thinking of ways to re-create the UI and create some of the existing features. I thought this would be a great project to add lots of things that I've learned to the same app instead of building them all individually.
+
+<h1>Summary</h1>
+
+This project was a real test for me as I created everything from scratch. It was also my first introduction to a lot of React concepts and features which I found very  challenging but a perfect learning lesson. 
+
+If I was to build this project again, I would do a lot of things differently and spend a lot more time on planning before building.
+
+With all that been said, this project took my development skills to the next level which will show in my next build.
+
+<h1>Built With</h1>
+
+- React.js
+- CSS
+- Material UI
+- Open Weather Map API
+- TMDB API
+
+<h1>Features</h1>
+
+- Live Weather Widget
+- Live Movie Updates
+- Music Player
+- Flight Timer
+- Food and Drink Menu
+
+<h1>Installation and Useage</h1>
+
+<h3>Install Dependencies</h3>
+
+npm install
 
 In the project directory, you can run:
 
-### `npm start`
+<h3>npm start</h3>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The page will reload if you make edits.
+You will also see any lint errors in the console.
 
-### `npm test`
+<h3>npm run build</h3>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
+Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-  <!-- fetchTrending: `/trending/all/week?api_key=${API_KEY}&language=en-US`,
-    fetchNetflixOriginals: `/discover/tv?api_key=${API_KEY}&with_networks=213`,
-    fetchActionAndAdventureSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10759`,
-    fetchAnimationSeries: `/discover/tv?api_key=${API_KEY}&with_genres=16`,
-    fetchComedySeries: `/discover/tv?api_key=${API_KEY}&with_genres=35`,
-    fetchCrimeSeries: `/discover/tv?api_key=${API_KEY}&with_genres=80`,
-    fetchDocumentarySeries: `/discover/tv?api_key=${API_KEY}&with_genres=99`,
-    fetchDramaSeries: `/discover/tv?api_key=${API_KEY}&with_genres=18`,
-    fetchFamilySeries: `/discover/tv?api_key=${API_KEY}&with_genres=10751`,
-    fetchKidsSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10762`,
-    fetchMysterySeries: `/discover/tv?api_key=${API_KEY}&with_genres=9648`,
-    fetchNewsSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10763`,
-    fetchRealitySeries: `/discover/tv?api_key=${API_KEY}&with_genres=10764`,
-    fetchScifiSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10765`,
-    fetchSoapSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10766`,
-    fetchTalkSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10767`,
-    fetchWarAndPoliticsSeries: `/discover/tv?api_key=${API_KEY}&with_genres=10768`,
-    fetchWesternSeries: `/discover/tv?api_key=${API_KEY}&with_genres=37`,
-
-    fetchTopRated: `/movie/top_rated?api_key=${API_KEY}&language=en-US`,
-    fetchActionMovies: `/discover/movie?api_key=${API_KEY}&with_genres=28`,
-    fetchAdventureMovies: `/discover/movie?api_key=${API_KEY}&with_genres=12`,
-    fetchAnimationMovies: `/discover/movie?api_key=${API_KEY}&with_genres=16`,
-    fetchComedyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=35`,
-    fetchCrimeMovies: `/discover/movie?api_key=${API_KEY}&with_genres=80`,
-    fetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
-    fetchDramaMovies: `/discover/movie?api_key=${API_KEY}&with_genres=18`,
-    fetchFamilyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10751`,
-    fetchFantasyMovies: `/discover/movie?api_key=${API_KEY}&with_genres=14`,
-    fetchHistoryMovies: `/discover/movie?api_key=${API_KEY}&with_genres=36`,
-    fetchHorrorMovies: `/discover/movie?api_key=${API_KEY}&with_genres=27`,
-    fetchMusicMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10402`,
-    fetchMysteryMovies: `/discover/movie?api_key=${API_KEY}&with_genres=9648`,
-    fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
-    fetchScifiMovies: `/discover/movie?api_key=${API_KEY}&with_genres=878`,
-    fetchTvMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10770`,
-    fetchThrillerMovies: `/discover/movie?api_key=${API_KEY}&with_genres=53`,
-    fetchWarMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10752`,
-    fetchWesternMovies: `/discover/movie?api_key=${API_KEY}&with_genres=37`, -->
