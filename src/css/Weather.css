@@ -51,3 +51,30 @@
     font-size: 8px;
 }
 
+@media screen and (width: 1680px) {
+    .weather-container {
+        width: 20%;
+        height: 25vh;
+        padding: 20px;
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+        position: relative;
+        background-color: #2c2c2c;
+        border-radius: 20px;
+    }
+}
+@media screen and (width: 1920px) {
+    .weather-container {
+        width: 20%;
+        height: 25vh;
+        padding: 20px;
+        display: flex;
+        gap: 40px;
+        flex-direction: column;
+        position: relative;
+        background-color: #2c2c2c;
+        border-radius: 20px;
+    }
+}
+
