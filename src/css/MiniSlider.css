@@ -10,6 +10,7 @@
     background-color: #222222;
     justify-content: center;
     align-items: center;
+    scrollbar-width: none;
 }
 
 .mini-media-element {

@@ -135,6 +135,7 @@ p {
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     background-color: #222222;
+    scrollbar-width: none;
 }
 
 .media-element {
